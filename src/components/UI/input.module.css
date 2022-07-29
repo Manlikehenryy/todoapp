@@ -1,0 +1,41 @@
+input{
+  border-radius: 4px;
+  width: 50%;
+  height: 50px;
+  margin: 10px;
+  padding-left: 30px;
+  border: 1.5px solid rgb(223, 220, 220);
+}
+.text{
+  border-radius: 4px;
+  width: 50%;
+  height: 100px;
+  margin: 10px;
+  padding-left: 30px;
+  border: 1.5px solid rgb(223, 220, 220);
+}
+input[type="submit"]{
+  padding-left: 0;
+  width: 100px;
+  height: 40px;    
+  background-color: rgb(20, 150, 206);
+  color: #fff;
+  border: rgb(20, 150, 206) 3px solid;
+  border-radius: 5px;
+   cursor: pointer;
+   text-align: center;
+   background-color: black;
+   border-radius:10px;
+   border:none;
+}
+input[type="submit"]:hover{
+  background-color: black;
+  border:black 3px solid;
+}
+
+@media screen and (max-width:1000px) {
+  input[type="submit"]{
+    width: 80px;
+    height: 30px;   
+  }
+}

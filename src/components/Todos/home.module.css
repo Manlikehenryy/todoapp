@@ -1,0 +1,29 @@
+.section{
+    border: rgb(20, 150, 206) solid 1.5px;
+    background-color: #fff;
+    color: rgb(20, 150, 206);
+    font-weight: 600;
+    margin-left: 10px;
+}
+.section:hover{
+    background-color: #f2f2f2;
+    border: rgb(20, 150, 206) solid 1.5px;
+}
+.back{
+    background-color:rgb(20, 150, 206) ;
+    color: #fff ;
+    width: 100px;
+    height: 40px;
+    margin-left: -10px;
+}
+
+@media screen and (max-width:600px) {
+    .section{
+      margin-left: 10px;
+    } 
+    .back{
+        width: 80px;
+        height: 30px;
+        margin-left: 25px;
+    }
+}

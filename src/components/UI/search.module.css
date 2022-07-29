@@ -1,0 +1,41 @@
+input[type="search"]{
+    width: 100% !important;
+    height: 20px !important;
+    border-radius: 10px !important;
+    border: 1.5px solid #ccc !important;
+    margin-left: 100px !important;
+    /* margin-top:0 ; */
+}
+.container{
+    width: 40% !important;
+    position: relative;
+     left: -50px;
+}
+.search{
+    position: absolute;
+    left: 110px;
+    top: 13px;
+    width: 15px;
+    height: 15px;
+}
+.btn{
+    position: relative;
+    width: 80px;
+    height: 25px;
+    left: 10%;
+    top: 7px;
+  }
+
+  
+@media  (max-width:768px) {
+    .container{
+        width: 50% !important;
+        left: -30px;
+    }
+    
+}
+@media  (max-width:430px) {
+    .container{
+        width: 40% !important;
+    }
+}
