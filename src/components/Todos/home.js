@@ -9,7 +9,6 @@ import CreateSection from "./createsection";
 import Todocontext from "../../store/Todocontext";
 import TodoItem from "./todoitem";
 import UpdateTodo from './updateTodo';
-import UpdateSection from './updateSection';
 
 import { useState,useContext } from "react";
 
@@ -19,9 +18,7 @@ function Home() {
     const [ShowSearch,SetShowSearch] = useState(false)
     const [ShowTodo,SetShowTodo] = useState(true)
     const [showEdit,setShowEdit] = useState({})
-    const [editSection,setEditSection] = useState({})
     const [showUpdate,setShowUpdate] = useState(false)
-    const [ShowUpdateSection,SetShowUpdateSection] = useState(false)
     const [searchInput,setSearchInput] = useState('')
 
  
@@ -39,12 +36,7 @@ function Home() {
        const closeSection = ()=>{
         SetShowSection(false)
        }
-       const closeSectionEdit = ()=>{
-        SetShowUpdateSection(false)
-        SetShowSearch(false)
-        SetShowTodo(true)
-       }
-
+ 
     const closeModal = ()=>{
         SetShowForm(false);
        }
@@ -189,7 +181,6 @@ tag={dummydata.tag[items.tag].name}  color={dummydata.tag[items.tag].color} />
     </Card>
     { ShowSection && <CreateSection onclose={closeSection}/>}
    {ShowForm && <CreateTodo onclose={closeModal}/>}
-   { ShowUpdateSection && <UpdateSection onclose={closeSectionEdit} id={editSection.id} name={editSection.name} /> } 
    { showUpdate && <UpdateTodo onclose={closeEdit} id={showEdit.id} title={showEdit.title} tag={showEdit.tag} time={showEdit.time} section={showEdit.sectionid} /> } 
    
     </div>)
