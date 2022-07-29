@@ -53,7 +53,7 @@ const submitHandler=(e)=>{
          return <form onSubmit={submitHandler} className={classes.sec} style={{ width: '50%',
          height: '200px'}}>
      <h2>Create A Section </h2>
-     {showError && <p style={{color:'red',fontSize:'13px',position:'absolute',left:'140px',top:'70px'}}>This section already exists</p> }  
+     {showError && <p className={classes.error} >This section already exists</p> }  
      <Input ref={sectionInputRef} input={{type:'text',placeholder:'Enter Section Title'}}/>
       <div>   
       <Input  class={styles} input={{type:'submit', value:'Create'}}/>

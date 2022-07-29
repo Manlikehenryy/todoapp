@@ -43,7 +43,7 @@ const submitHandler=(e)=>{
             setStyle(classes.shake)
     }
     }
-    else if(sectionInput === '' || titleInput !== '' || dateInput !== '' || tagInput !== ''){
+    else if(sectionInput === '' || titleInput === '' || dateInput === '' || tagInput === ''){
         setStyle(classes.shake) 
     }
 

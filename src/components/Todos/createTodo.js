@@ -45,7 +45,7 @@ const submitHandler=(e)=>{
                 setStyle(classes.shake)
         }
         }
-        else if(sectionInput === '' || titleInput !== '' || dateInput !== '' || tagInput !== ''){
+        else if(sectionInput === '' || titleInput === '' || dateInput === '' || tagInput === ''){
             setStyle(classes.shake) 
         }
     
@@ -59,7 +59,7 @@ const closeform=()=>{
 
     return <form onSubmit={submitHandler} className={classes.form}>
         <h2>Create A To-Do </h2>
-        {showError && <p style={{color:'red',fontSize:'13px',position:'absolute',left:'140px',top:'70px'}}>This section does not exist</p> }  
+        {showError && <p className={classes.error} >This section does not exist</p> }  
         <Input ref={sectionInputRef} input={{type:'text',placeholder:'Enter Section Title e.g New Task,Urgent'}}/>
         <TextArea ref={titleInputRef} input={{type:'text',placeholder:'Enter Description or Title '}}/>
         <Input ref={dateInputRef} input={{type:'date',placeholder:'Enter Date'}}/>

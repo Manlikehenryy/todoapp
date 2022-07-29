@@ -123,6 +123,14 @@ button[type="btn"]{
     font-weight:600 !important;
     margin-left:0 ;
 }
+.error{
+    color: red !important;
+    font-size:13px;
+    position:relative;
+    left:0px;
+    top:0px;
+    margin: 0;
+}
 
 @media screen and (max-width:1000px) {
     .form{
@@ -130,14 +138,26 @@ button[type="btn"]{
         height: 370px;
         left: 15%;
     }
-    .sec{
-        width: 90%;
-        height: 370px;
-        left: 25%;
-    }
     button[type="btn"]{
         width: 80px;
         height: 30px;   
         margin-left: 0;
+    } 
+    h2{
+    font-size: 14px !important;
     }
+    .error{
+        font-size: 9px !important;
+    }
+}
+
+@media screen and (max-width:600px) {
+       .sec{
+        width: 370px;
+        height: 370px;
+        left: 26%;
+    }
+    button[type="btn"]{
+        border-radius: 150px !important;
+    } 
 }

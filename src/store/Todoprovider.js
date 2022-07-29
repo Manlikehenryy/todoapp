@@ -1,13 +1,19 @@
 import Todocontext from "./Todocontext";
 import { useReducer } from "react";
 
+const d = new Date()
+const currday = d.getDate();    /* returns a no btw 1-31 */
+const currmonth = d.getMonth(); /* returns a no btw 0-11 */
+const curryear = d.getFullYear(); /* returns four digit yyyy */
+
+let today = `${curryear}-${currmonth + 1}-${currday}`
 
 const defaultTodoState = { 
    dummy : [
    {id :1,
     sectionid: 'new task',
    title: 'Quarterly newsletter',
-   time: '2022-07-23',
+   time: today,
    tag: 0,
    checked: false
    },
@@ -16,7 +22,7 @@ const defaultTodoState = {
     title: 'Mobile app launch',
    time: '2022-05-20',
    tag: 1,
-   checked: false
+   checked: true
    }       
    ,     
     { id: 3,
@@ -28,10 +34,24 @@ const defaultTodoState = {
 
       },
       {id :4,
-        sectionid: 'today',
+        sectionid: 'school',
         title: 'Open day at school',
       time: '2022-06-13',
       tag: 3,
+      checked: false
+
+      },{id :5,
+        sectionid: 'school',
+        title: 'P.T.A meeting',
+      time: '2022-06-31',
+      tag: 3,
+      checked: false
+
+      },{id :6,
+        sectionid: 'today',
+        title: 'Eat Vegetables',
+      time: '2022-06-13',
+      tag: 2,
       checked: false
 
       }
