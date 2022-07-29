@@ -85,14 +85,14 @@
     }
 }
 .close{
-    font-size: 19px;
+    /* font-size: 19px; */
     /* width: 30px;
     height: 50px; */
     /* background-color: #ccc; */
-    border-radius: 50%;
+    /* border-radius: 50%;
     text-align: center;
     position: fixed;
-    left: 250px;
+    left: 250px; */
 }
 input[type="button"]{
     color:#000;
@@ -121,6 +121,7 @@ button[type="btn"]{
     border:2px solid #000 !important;
     color:#000 !important;
     font-weight:600 !important;
+    margin-left:0 ;
 }
 
 @media screen and (max-width:1000px) {
@@ -137,6 +138,6 @@ button[type="btn"]{
     button[type="btn"]{
         width: 80px;
         height: 30px;   
-        margin-left: 0px;
+        margin-left: 0;
     }
 }

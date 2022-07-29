@@ -106,8 +106,8 @@ dummydata.closeSection(id)
                   }
  /*-----------------------------------CHECKS IF TITLE IS GREATER THAN 25, THEN ADDS ELLIPSIS(CONTINUATION)--------------------------------------------------------*/     
                   let title
-                  if (items.title.length > 25) {
-                     title = items.title.slice(0,25)
+                  if (items.title.length > 20) {
+                     title = items.title.slice(0,20)
                     title = `${title}...`
                   }
                   else{

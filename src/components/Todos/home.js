@@ -125,9 +125,9 @@ if (itemIndex !== -1 || tagIndex !== -1) {
                       }
                        /*-----------------------------------CHECKS IF TITLE IS GREATER THAN 25, THEN ADDS ELLIPSIS(CONTINUATION)--------------------------------------------------------*/     
                       let title
-                      if (items.title.length > 25) {
-                         title = items.title.slice(0,25)
-                        title = `${title}.....`
+                      if (items.title.length > 20) {
+                         title = items.title.slice(0,20)
+                        title = `${title}...`
                       }
                       else{
                          title = items.title

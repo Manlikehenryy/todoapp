@@ -17,8 +17,8 @@ border-radius: 10px;
         margin: 30px auto;
         }
 }
-@media screen and (max-width:500px) {
+/* @media screen and (max-width:500px) {
     .card{
         width: 80%;
         }
-}
+} */
