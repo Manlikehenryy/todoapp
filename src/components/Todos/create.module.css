@@ -32,68 +32,69 @@
     box-shadow: 0 0 36px rgba(0, 0, 0, 0.3);
     animation: slideAndExpand 0.6s ease-out forwards;
 }
-
-@keyframes slideAndExpand {
-    0%{
-        transform: translateY(-100%) scaleX(0.8);
-        opacity: 1;
-    }
-    30%{
-        transform: translateY(50%) scaleX(0.8);
-        opacity: 1;
-    }
-    60%{
-        transform: translateY(-20%) scaleX(1.3);
-        opacity: 1;
-    }
-    100%{
-        transform: translateY(0%) scaleX(1);
-        opacity: 1;
-    }
-}
-
-
-
-
-
 .shake{
-    animation: 0.2s BtnShake ease-out ;
     position: relative;
     top:0;
     left:0;
 }
 
+@media screen and (min-width:768px) {
+    .sec,.form{
+        animation: slideAndExpand 0.6s ease-out forwards;
+    }
+    
+    @keyframes slideAndExpand {
+        0%{
+            transform: translateY(-100%) scaleX(0.8);
+            opacity: 1;
+        }
+        30%{
+            transform: translateY(50%) scaleX(0.8);
+            opacity: 1;
+        }
+        60%{
+            transform: translateY(-20%) scaleX(1.3);
+            opacity: 1;
+        }
+        100%{
+            transform: translateY(0%) scaleX(1);
+            opacity: 1;
+        }
+    }
+    
+    
+    
+    
+    
+    .shake{
+        animation: 0.2s BtnShake ease-out ;
+    }
+    
+    
+    @keyframes BtnShake {
+        0%{
+            transform: translateX(-10%);
+        }
+        20%{
+            transform: translateX(10%);
+        }
+        40%{
+            transform: translateX(-10);
+        }
+       60%{
+            transform: translateX(10%);
+        }
+        80%{
+            transform: translateX(-10%);
+        }
+        100%{
+            transform: translateX(0%);
+        }
+    }
+}
 
-@keyframes BtnShake {
-    0%{
-        transform: translateX(-10%);
-    }
-    20%{
-        transform: translateX(10%);
-    }
-    40%{
-        transform: translateX(-10);
-    }
-   60%{
-        transform: translateX(10%);
-    }
-    80%{
-        transform: translateX(-10%);
-    }
-    100%{
-        transform: translateX(0%);
-    }
-}
-.close{
-    /* font-size: 19px; */
-    /* width: 30px;
-    height: 50px; */
-    /* background-color: #ccc; */
-    /* border-radius: 50%;
-    text-align: center;
-    position: fixed;
-    left: 250px; */
-}
+
+
 input[type="button"]{
     color:#000;
     background-color: #fff !important;
