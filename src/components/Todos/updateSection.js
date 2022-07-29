@@ -60,7 +60,7 @@ const closeform=()=>{
  }
 
 
- return   <form onSubmit={submitHandler} className={classes.form} style={{ width: '50%',
+ return   <form onSubmit={submitHandler} className={classes.sec} style={{ width: '50%',
  height: '200px'}}>
     
     <h2>Update Section </h2>
