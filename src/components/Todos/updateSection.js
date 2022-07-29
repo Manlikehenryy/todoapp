@@ -64,7 +64,7 @@ const closeform=()=>{
  height: '200px'}}>
     
     <h2>Update Section </h2>
-    {showError && <p style={{color:'red',fontSize:'13px',position:'absolute',left:'140px',top:'70px'}}>This section already exists</p> }  
+    {showError && <p className={classes.error}>This section already exists</p> }  
     <Input ref={sectionInputRef} input={{type:'text',defaultValue:props.name}}/>
     <div>   
     <Input class={styles} styles={{backgroundColor:'black',borderRadius:'10px',border:'none'}} input={{type:'submit', value:'Update'}}/>

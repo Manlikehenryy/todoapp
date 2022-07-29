@@ -58,7 +58,7 @@ const closeform=()=>{
 
  return   <form onSubmit={submitHandler} className={classes.form}>
     <h2>Update To-Do </h2>
-    {showError && <p style={{color:'red',fontSize:'13px',position:'absolute',left:'140px',top:'70px'}}>This section does not exist</p> }  
+    {showError && <p className={classes.error}>This section does not exist</p> }  
     <Input ref={sectionInputRef} input={{type:'text',defaultValue:props.section}}/>
     <TextArea ref={titleInputRef} input={{type:'text',defaultValue:props.title}}/>
     <Input ref={dateInputRef} input={{type:'date',defaultValue:props.time}}/>
