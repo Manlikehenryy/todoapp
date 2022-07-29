@@ -14,11 +14,6 @@ border-radius: 10px;
 @media screen and (max-width:700px) {
     .card{
         width: 90%;
-        margin: 30px auto;
+        margin: 100px auto !important;
         }
 }
-/* @media screen and (max-width:500px) {
-    .card{
-        width: 80%;
-        }
-} */
