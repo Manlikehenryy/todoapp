@@ -43,7 +43,7 @@ const defaultTodoState = {
       },{id :5,
         sectionid: 'school',
         title: 'P.T.A meeting',
-      time: '2022-06-31',
+      time: '2022-06-30',
       tag: 3,
       checked: false
 
@@ -89,7 +89,7 @@ const defaultTodoState = {
     ],
 
     tagscreated: 4,
-    todocreated: 4
+    todocreated: 6
 }
   
 

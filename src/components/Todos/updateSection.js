@@ -5,6 +5,7 @@ import Todocontext from "../../store/Todocontext"
 
 const UpdateSection = (props)=>{
     const [showError,setShowError] = useState(false);
+    const [SectIsValid,SetSectIsValid] = useState(true);
     const todo = useContext(Todocontext);
     const sectionInputRef = useRef();
     const [styles,setStyle] = useState('')
@@ -20,7 +21,19 @@ const submitHandler=(e)=>{
     let sectionIndex = todo.sections.findIndex(value=> value.id.toUpperCase() === sectionname);
     let sectionInput = sectionInputRef.current.value.toUpperCase().trim();
     let itemIndex = todo.sections.findIndex(val=>val.name.toUpperCase() === sectionInput)
-if (sectionInput !== "") {
+
+// --------------------------------------------------------------------------------------
+//  CHECKS IF A SPECIFIC INPUT FIELD IS EMPTY
+// --------------------------------------------------------------------------------------
+if (sectionInput === '' ) {
+    setStyle(classes.shake)
+    SetSectIsValid(false); 
+}
+else{
+    SetSectIsValid(true); 
+}
+
+if (sectionInput !== "") { 
     if (itemIndex !== -1) {
         let existingsection = todo.sections[itemIndex].name.toUpperCase()
         if (existingsection === sectionname) {
@@ -35,6 +48,7 @@ if (sectionInput !== "") {
         }
         else{
            setShowError(true)
+           setStyle(classes.shake)
         }
        }
        else if(itemIndex === -1){
@@ -49,9 +63,6 @@ if (sectionInput !== "") {
        }
 }
 
-else if(sectionInput === ""){
-    setStyle(classes.shake)
-}
 
 }
 
@@ -65,7 +76,7 @@ const closeform=()=>{
     
     <h2>Update Section </h2>
     {showError && <p className={classes.error}>This section already exists</p> }  
-    <Input ref={sectionInputRef} input={{type:'text',defaultValue:props.name}}/>
+    <Input  color={SectIsValid ? '' : "#f9b6b5"} ref={sectionInputRef} input={{type:'text',defaultValue:props.name}}/>
     <div>   
     <Input class={styles} styles={{backgroundColor:'black',borderRadius:'10px',border:'none'}} input={{type:'submit', value:'Update'}}/>
     <button type="btn" onClick={closeform} style={{backgroundColor:'#fff',borderRadius:'10px',border:'2px solid #000',color:'#000',fontWeight:'600'}}>Close</button>

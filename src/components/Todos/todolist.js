@@ -98,13 +98,13 @@ dummydata.closeSection(id)
                   if (year === curryear && month === currmonth + 1 && day === currday) {
                    date = 'Today';
                   }
-                 else if (year < curryear ) {
+                 else if (year !== curryear ) {
                     date = `${montharr[month - 1]} ${day} ${year}`  ;
                    }
                    else{
                    date = `${montharr[month - 1]} ${day} `  ;
                   }
- /*-----------------------------------CHECKS IF TITLE IS GREATER THAN 25, THEN ADDS ELLIPSIS(CONTINUATION)--------------------------------------------------------*/     
+ /*-----------------------------------CHECKS IF TITLE IS GREATER THAN 20, THEN ADDS ELLIPSIS(CONTINUATION)--------------------------------------------------------*/     
                   let title
                   if (items.title.length > 20) {
                      title = items.title.slice(0,20)

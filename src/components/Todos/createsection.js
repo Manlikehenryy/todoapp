@@ -5,6 +5,7 @@ import Todocontext from "../../store/Todocontext"
 
 const CreateSection =(props)=>{
 const sectionInputRef = useRef();
+const [SectIsValid,SetSectIsValid] = useState(true);
  const todo = useContext(Todocontext);
  const [showError,setShowError] = useState(false);
  const [styles,setStyle] = useState('')
@@ -16,6 +17,18 @@ const sectionInputRef = useRef();
 const submitHandler=(e)=>{
     e.preventDefault()
     let sectionInput = sectionInputRef.current.value.toLowerCase().trim();
+// --------------------------------------------------------------------------------------
+//  CHECKS IF A SPECIFIC INPUT FIELD IS EMPTY
+// --------------------------------------------------------------------------------------
+if (sectionInput === '' ) {
+    setStyle(classes.shake)
+    SetSectIsValid(false); 
+}
+else{
+    SetSectIsValid(true); 
+}
+
+
     if (sectionInput !== '') {
         const existingSection = todo.sections.findIndex(val=>val.id === sectionInput)
         if (existingSection === -1) {
@@ -31,11 +44,6 @@ const submitHandler=(e)=>{
             setShowError(true)
             setStyle(classes.shake)
     }
-    }
-    else if(sectionInput === ''){
-        setStyle(classes.shake)
-
-   
     }
 
 
@@ -54,7 +62,7 @@ const submitHandler=(e)=>{
          height: '200px'}}>
      <h2>Create A Section </h2>
      {showError && <p className={classes.error} >This section already exists</p> }  
-     <Input ref={sectionInputRef} input={{type:'text',placeholder:'Enter Section Title'}}/>
+     <Input color={SectIsValid ? '' : "#f9b6b5"} ref={sectionInputRef} input={{type:'text',placeholder:'Enter Section Title'}}/>
       <div>   
       <Input  class={styles} input={{type:'submit', value:'Create'}}/>
       <button  type="btn" onClick={closeform} style={{backgroundColor:'#fff',borderRadius:'10px',border:'2px solid #000',color:'#000',fontWeight:'600'}}>Close</button>
