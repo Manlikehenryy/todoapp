@@ -102,7 +102,7 @@ const closeform=()=>{
         <Input color={DateIsValid ? '' : "#f9b6b5"} ref={dateInputRef} input={{type:'date',placeholder:'Enter Date'}}/>
         <Input color={TagIsValid ? '' : "#f9b6b5"} ref={tagInputRef} input={{type:'text',placeholder:'Enter Tag e.g work,gym,chores'}}/>
         <div>   
-        <Input  class={styles} styles={{backgroundColor:'black',borderRadius:'10px',border:'none'}} input={{type:'submit', value:'Save Todo'}}/>
+        <Input  class={styles} styles={{backgroundColor:'black',borderRadius:'10px',border:'none'}} input={{type:'submit', value:'Save To-Do'}}/>
         <button type="btn" onClick={closeform} style={{backgroundColor:'#fff',borderRadius:'10px',border:'2px solid #000',color:'#000',fontWeight:'600'}}>Close</button>
      </div>
     </form>
