@@ -30,7 +30,7 @@ input[type="search"]{
 @media  (max-width:768px) {
     .container{
         width: 50% !important;
-        left: -30px;
+        left: -38px;
     }
     
 }
